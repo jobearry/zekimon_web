@@ -17,7 +17,7 @@ export function Navbar() {
 
 
   return (
-    <NavigationMenu className="border rounded-md">
+    <NavigationMenu className="border rounded-md z-10 bg-white">
       <NavigationMenuList>
         {navLinks.map(navLink => <NavigationMenuItem className={`${navigationMenuTriggerStyle()} cursor-pointer`}>{navLink}</NavigationMenuItem>)}
         {/* <NavigationMenuItem>

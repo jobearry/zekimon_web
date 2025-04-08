@@ -1,4 +1,4 @@
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "../ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../ui/carousel";
 import { Card, CardContent } from "../ui/card";
 
 const images = [
@@ -12,14 +12,14 @@ const images = [
 
 export function Showcase() {
   return (
-    <Carousel className="w-full max-w-xs">
+    <Carousel className="sm:w-4xl w-full text-end">
       <CarouselContent>
         {images.map((image, index) => (
-          <CarouselItem key={index}>
+          <CarouselItem key={index} className="sm:basis-1/3">
             <div className="p-1">
               <Card>
-                <CardContent className="flex aspect-square items-center justify-center">
-                  <img src={image.src} className="text-4xl font-semibold rounded-md"/>
+                <CardContent className="flex items-center justify-center">
+                  <img src={image.src} className="text-4xl font-semibold rounded-md aspect-9/16"/>
                 </CardContent>
               </Card>
             </div>
