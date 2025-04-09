@@ -12,10 +12,10 @@ const images = [
 
 export function Showcase() {
   return (
-    <Carousel className="sm:w-4xl w-full text-end">
+    <Carousel className="lg:w-4xl md:w-2xl sm:w-xl xs:w-lg xxs:w-2xs w-[20rem] text-end ">
       <CarouselContent>
         {images.map((image, index) => (
-          <CarouselItem key={index} className="sm:basis-1/3">
+          <CarouselItem key={index} className="lg:basis-1/3 md:basis-2/5 sm:basis-3/6 xs:basis-5/6">
             <div className="p-1">
               <Card>
                 <CardContent className="flex items-center justify-center">

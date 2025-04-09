@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
-@plugin 'tailwind-scrollbar';
-
 @custom-variant dark (&:is(.dark *));
+@theme {
+  --font-nunito: "Nunito", sans-serif;
+}
 
+/* *{
+  border: 1px solid red
+} */
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
