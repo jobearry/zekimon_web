@@ -23,7 +23,7 @@ export const Main = () => {
         </div>
       </div>
 
-      <div className="grid place-items-center  ">
+      <div className="grid place-items-center h-screen">
         <div className=" w-full grid place-items-center">
           <div className="w-full sm:w-auto">
             <h2 className="text-2xl text-center sm:text-start font-bold  ">Posters Showcase</h2>
