@@ -12,13 +12,13 @@ const images = [
 
 export function Showcase() {
   return (
-    <Carousel className="lg:w-4xl md:w-2xl sm:w-xl xs:w-lg xxs:w-2xs w-[20rem] text-end ">
+    <Carousel className="lg:w-4xl md:w-2xl sm:w-xl xs:w-lg xxs:w-2xs w-[20rem] text-end">
       <CarouselContent>
         {images.map((image, index) => (
           <CarouselItem key={index} className="lg:basis-1/3 md:basis-2/5 sm:basis-3/6 xs:basis-5/6">
             <div className="p-1">
-              <Card>
-                <CardContent className="flex items-center justify-center">
+              <Card className="border-[#397c34] border-[.25rem]">
+                <CardContent className="flex items-center justify-center ">
                   <img src={image.src} className="text-4xl font-semibold rounded-md aspect-9/16"/>
                 </CardContent>
               </Card>
@@ -26,8 +26,8 @@ export function Showcase() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="border-[#397c34] border-[.25rem] mx-1" />
+      <CarouselNext className="border-[#397c34] border-[.25rem] mx-1"/>
     </Carousel>
   )
 }
