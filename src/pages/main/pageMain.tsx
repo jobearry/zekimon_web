@@ -1,12 +1,15 @@
 import { Navbar } from "../../components/navbar/navbar"
 import { Showcase } from "../../components/showcase/showcase"
 
-export const Main = () => {
+export const PageMain = () => {
   return (
     <section className="grid sm:grid-cols-1 grid-cols-1 w-full lg:w-[80rem] place-items-center bg-[#ddd8c5]">
       {/* <h2 className="text-5xl tracking-widest absolute top-0 font-nunito m-3  ">zekimon</h2> */}
-      <div className="sticky top-6">
+      <div className="sticky top-6 w-10/12">
         <Navbar></Navbar>
+      </div>
+      <div>
+
       </div>
       <div className="h-screen w-full grid grid-cols-1 place-items-center">
         <div className="w-full flex flex-col place-items-center justify-center">
@@ -21,7 +24,7 @@ export const Main = () => {
           </div>
         </div>
       </div>
- 
+
       <div className="grid place-items-center h-screen">
         <div className=" w-full grid place-items-center">
           <div className="w-full sm:w-auto">

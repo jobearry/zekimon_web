@@ -5,8 +5,8 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "../../components/ui/navigation-menu"
-// import { Label } from "../ui/label"
-// import { Switch } from "../ui/switch"
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTrigger } from "../ui/sheet"
+import { FaBars } from "react-icons/fa6";
 
 const navLinks: string[] = [
   "Home", "Projects", "About"
@@ -14,28 +14,44 @@ const navLinks: string[] = [
 
 export function Navbar() {
 
-
   return (
-    <NavigationMenu className="rounded-md z-20 bg-transparent ">
-      <NavigationMenuList>
-        {
-          navLinks.map(navLink =>
-            <Link to={`${navLink.toLowerCase()}`}> 
-              <NavigationMenuItem className={`${navigationMenuTriggerStyle()} backdrop-blur-lg cursor-pointer bg-transparent border-[#397c34] border-[.15rem] `}>
-                {navLink} 
-              </NavigationMenuItem>
-            </Link>
-          )
-        }
-        {/* <NavigationMenuItem>
-          <div className="flex items-center space-x-2">
-            <Switch id="dark-mode" />
-            <Label htmlFor="dark-mode">Dark Mode</Label>
-          </div>
-        </NavigationMenuItem> */}
-      </NavigationMenuList>
-    </NavigationMenu>
+    <section className="w-full grid place-items-center">
+      <NavigationMenu className="rounded-md z-20 bg-transparent hidden sm:block">
+        <NavigationMenuList>
+          {
+            navLinks.map(navLink =>
+              <Link to={`${navLink.toLowerCase()}`}> 
+                <NavigationMenuItem className={`${navigationMenuTriggerStyle()} backdrop-blur-lg cursor-pointer bg-transparent hover:bg-[#CECABB]`}>
+                  {navLink} 
+                </NavigationMenuItem>
+              </Link>
+            )
+          }
+        </NavigationMenuList>
+      </NavigationMenu>
+      <Sheet>
+        <SheetTrigger className="block sm:hidden place-self-end focus:outline-[#397c34]      ">
+          <FaBars className="h-8 w-8"/>
+        </SheetTrigger>
+        <SheetContent className="bg-[#ddd8c5]">
+          <SheetHeader>
+            <SheetDescription className="flex flex-col my-4">
+              {
+                navLinks.map(navLink =>
+                  <Link to={`${navLink.toLowerCase()}`}> 
+                    <NavigationMenuItem className={`${navigationMenuTriggerStyle()}
+                      w-full my-2 backdrop-blur-lg cursor-pointer bg-transparent hover:bg-[#CECABB]`}>
+                      {navLink} 
+                    </NavigationMenuItem>
+                  </Link>
+                )
+              }  
+            </SheetDescription>
+          </SheetHeader>
+        </SheetContent>
+      </Sheet>
 
+    </section>
   )
 }
 
