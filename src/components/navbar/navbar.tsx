@@ -30,7 +30,7 @@ export function Navbar() {
         </NavigationMenuList>
       </NavigationMenu>
       <Sheet>
-        <SheetTrigger className="block sm:hidden place-self-end focus:outline-[#397c34]      ">
+        <SheetTrigger className="block sm:hidden place-self-end">
           <FaBars className="h-8 w-8"/>
         </SheetTrigger>
         <SheetContent className="bg-[#ddd8c5]">
