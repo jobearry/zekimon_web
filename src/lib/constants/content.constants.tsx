@@ -1,7 +1,7 @@
 import { BookOpen, Building, IdCard, Minus } from "lucide-react";
 import { BlockProps } from "../../components/common/block";
-import { Timeline } from "../../pages/Home/components/timeline";
 import { Showcase } from "../../components/showcase/showcase";
+import { Timeline } from "../../pages/Home/components/Timeline";
 
 
 export interface TimelineEvent{
