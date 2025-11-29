@@ -1,15 +1,14 @@
 import './App.css'
 // import { Navbar } from './components/navbar/navbar'
-import { PageMain } from './pages/main/pageMain'
+import { Home } from './pages/Home/Home'
 
 
 
 function App() {
 
   return (
-    <section className='grid place-items-center border bg-[#CECABB]'>
-
-      <PageMain></PageMain>
+    <section className='dark'>
+      <Home></Home>
     </section>
   )
 }
